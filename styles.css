@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {  
+    --BodyFontKarla: 'Karla', sans-serif;
+    --Cyan:          hsl(179, 62%, 43%);
+    --LightCyan:     hsl(179, 62%, 48%);
+    --BrightYellow:  hsl(71, 73%, 54%);
+    --BtnBoxShadow:  hsla(0, 0%, 0%, 0.288);
+    --LightGray:     hsl(204, 43%, 93%);
+    --GrayishBlue:   hsl(218, 22%, 67%);
+    --White:         hsl(0, 0%, 100%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--LightGray);
+    font-family: var(--BodyFontKarla);
+    font-size: 16px;
+}
+/* Design: mobile first, viewport-375px */
+.main__container{
+    width: 313px;
+    height: 730px;
+    margin: 70px auto 70px;       
+    border-radius: 8px;  
+    overflow: hidden;            
+}
+.community-section{
+    background-color: var(--White);
+    padding: 8px 25px 25px 25px;
+    height: 270px;
+    box-sizing: border-box;
+    animation: fromabovetobelow 1000ms none;
+}
+.community-section__title{
+    color: var(--Cyan);
+    font-size: 1.2em;
+}
+.community-section__second-title{
+    color: var(--BrightYellow);
+    font-size: 1em;
+    margin: 25 0 10px 0;
+}
+.community-section p{
+    color: var(--GrayishBlue);
+    font-size: 0.86em;
+    line-height: 30px;
+    margin-top: 16px;   
+}
+.subscription-section{
+    background-color: var(--Cyan);
+    box-sizing: border-box;
+    height: 230px;
+    padding: 12px 25px 25px 25px;
+    color: var(--LightGray);
+    animation: fromlefttoright 1000ms none;
+}
+.subscription-section h2{
+    font-size: 1em;
+    margin-bottom: 18px;
+}
+.price{
+    font-size: 2em;
+    font-weight: 700;
+}
+.subscription-section p{
+    margin-top: 8px;
+}
+button{
+    background-color: var(--BrightYellow);
+    margin-top: 14px;
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+    color: var(--LightGray);
+    font-size: 1em;
+    font-weight: 700;
+    box-shadow: 1px 8px 8px 8px var(--BtnBoxShadow);
+}
+button:hover {
+    cursor: pointer;
+}
+.whyus-section{
+    background-color: var(--LightCyan);
+    box-sizing: border-box;
+    height: 230px;
+    padding: 8px 25px 25px 25px;
+    color: var(--LightGray);
+    animation: fromrighttoleft 1000ms none;
+}
+.whyus-section h2{
+    font-size: 1.2em;
+}
+li{
+    list-style-type: none;
+    margin-left: -40px;
+    font-size: 0.85em;
+    line-height: 20px;
+}
+/* footer */
+.attribution{ 
+    font-size: 11px; text-align: center;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%); 
+}
+/* Design: desktop and large devices, viewport-1440px */
+@media only screen and (min-width: 680px){
+    .main__container{
+        width: 636px;
+        height: 476px;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        margin: 160px auto 100px;
+    }
+    .community-section{
+        grid-column: 1 / 3;
+        padding: 20px 35px 35px 35px;
+        height: 218px;
+    }
+    .community-section__title{
+        font-size: 1.45em;
+    }   
+    .community-section__second-title{
+        font-size: 1.1em;
+    }
+    .community-section p{
+        font-size: 1em;
+        line-height: 30px;
+        margin-top: 8px;        
+    }
+    .subscription-section{
+        padding: 20px 40px 40px 40px;
+        height: 258px;
+    }
+    .subscription-section__title{
+        font-size: 1.1em;
+    }
+    .subcription-section p{
+        font-size: 0.9em;
+    }
+    .whyus-section {
+        height: 258px;
+        padding: 20px 40px 40px 40px;
+    }
+}
+/* Animation */
+@keyframes fromabovetobelow {
+    0% {transform:  translateY(-500px);}
+  100% {transform:  translateY(0)}
+}
+@keyframes fromlefttoright{
+    0% {transform:  translateX(-500px);}
+  100% {transform:  translateX(0)}
+}
+@keyframes fromrighttoleft{
+    0% {transform:  translateX(500px);}
+  100% {transform:  translateX(0)}
+}
